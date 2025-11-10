@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration</title>
+</head>
+<body>
+  <h2>Register for Event</h2>
+  <form onsubmit="register(); return false;">
+    <input id="name" type="text" placeholder="Full Name" required><br><br>
+    <input id="email" type="email" placeholder="Email" required><br><br>
+    <input id="phone" type="tel" placeholder="Phone Number" required><br><br>
+    <select id="event">
+      <option>Workshop</option>
+      <option>Seminar</option>
+      <option>Hackathon</option>
+    </select><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="msg"></p>
+
+  <script>
+    function register() {
+      let name = document.getElementById("name").value;
+      document.getElementById("msg").innerText = "✅ Thank you " + name + "! You are registered.";
+    }
+  </script>
+</body>
+</html>
